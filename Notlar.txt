@@ -1,0 +1,9 @@
+1 - Menüdeki isim yazı tipi değişecek.
+2 - Nihai tasarım sürümüne karar verilecek ve 
+ya köşeli (blueprint tarzı) ya da daha yuvarlak hatlar 
+benimsenip tüm projeye uygulanacak.
+3 - Giriş animasyonu eklenecek.
+4- üst menüye me ve certificates eklenecek, contact çıkartılacak.
+5- En altta çalışmaya açık yazısı yeşil olacak.
+
+6- Projeler kısmında başlık yazı tipi değişecek.

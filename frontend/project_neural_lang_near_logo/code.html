@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neural Library Engine - CURATOR</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#825159",
+                        "on-background": "#1c1c16",
+                        "tertiary": "#516353",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#f5b6bf",
+                        "secondary-container": "#f4ded4",
+                        "primary": "#825159",
+                        "on-tertiary-container": "#405243",
+                        "surface-container-high": "#ebe8df",
+                        "on-primary-container": "#6f4048",
+                        "outline": "#837375",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#d7c2b9",
+                        "inverse-primary": "#f5b6bf",
+                        "on-secondary-container": "#716159",
+                        "surface-container-highest": "#e5e2d9",
+                        "tertiary-fixed-dim": "#b8ccb9",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-fixed-variant": "#52443d",
+                        "on-tertiary-fixed-variant": "#394b3c",
+                        "surface-dim": "#dddad1",
+                        "surface": "#fdf9f0",
+                        "surface-bright": "#fdf9f0",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-surface": "#1c1c16",
+                        "on-tertiary-fixed": "#0e1f13",
+                        "secondary": "#6b5b53",
+                        "on-secondary-fixed": "#241913",
+                        "surface-container-low": "#f7f3ea",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#b0c4b1",
+                        "on-primary-fixed": "#330f17",
+                        "tertiary-fixed": "#d3e8d4",
+                        "surface-container": "#f1eee4",
+                        "inverse-surface": "#31312b",
+                        "secondary-fixed": "#f4ded4",
+                        "inverse-on-surface": "#f4f1e7",
+                        "on-surface-variant": "#514345",
+                        "primary-fixed": "#ffd9de",
+                        "background": "#fdf9f0",
+                        "primary-container": "#edafb8",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e5e2d9",
+                        "outline-variant": "#d5c2c4",
+                        "on-primary-fixed-variant": "#673a42",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; background-color: #fdf9f0; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#f1eee4]/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#1c1c16]"><div class="text-2xl font-bold tracking-tighter text-[#1c1c16] font-headline">A. KADİR KARAKUŞ <span class="inline-flex items-center gap-2 ml-4 font-body text-xs font-normal tracking-normal lowercase opacity-60"><button class="hover:text-primary transition-colors">en</button><span class="opacity-30">|</span><button class="hover:text-primary transition-colors">tr</button></span></div></div>
+<div class="hidden md:flex items-center space-gap-8 gap-8 font-['Space_Grotesk'] font-bold tracking-tight">
+<a class="text-[#514345] hover:text-[#825159] transition-colors duration-300" href="#">Home</a>
+<a class="text-[#825159] border-b-2 border-[#825159] pb-1" href="#">Experience</a>
+<a class="text-[#514345] hover:text-[#825159] transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl text-sm font-bold scale-95 duration-200 ease-in-out hover:scale-100">
+                Get in touch
+            </button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-8 max-w-7xl mx-auto">
+<!-- Hero Section: Asymmetric Editorial Layout -->
+<header class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end mb-24">
+<div class="lg:col-span-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-tertiary-container text-on-tertiary-container rounded-sm mb-6 text-xs font-bold tracking-widest uppercase">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">neurology</span>
+                    AI &amp; MACHINE LEARNING
+                </div>
+<h1 class="text-6xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-on-surface mb-8">
+                    Neural <br/>Library <br/><span class="text-surface-tint">Engine</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed font-light">
+                    An architectural paradigm for semantic indexing, transforming petabytes of unstructured text into a navigable neural atlas of human knowledge.
+                </p>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-8">
+<div class="p-8 bg-surface-container rounded-xl">
+<h3 class="text-sm font-bold uppercase tracking-widest text-outline mb-4">Core Metrics</h3>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/15 pb-2">
+<span class="text-on-surface-variant">Latency</span>
+<span class="font-headline font-bold">12ms</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/15 pb-2">
+<span class="text-on-surface-variant">Context Window</span>
+<span class="font-headline font-bold">128k</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Embedding Dim</span>
+<span class="font-headline font-bold">1536</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Bento Grid Feature Showcase -->
+<section class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 mb-24">
+<!-- Large Focus Image -->
+<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl bg-surface-container-highest">
+<img class="w-full h-full object-cover transition-transform duration-700 hover:scale-105" data-alt="Abstract 3D visualization of complex neural network nodes and glowing synaptic connections in a dark ethereal digital space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBINkUiQs1F33ed6syzeXhGbbolaLDgMIlkEtcWezwR9ONiflK7oI1hXvaAwz3fQV9-ZHysbCnOSqL64YQnBcvQDr2kXMgkBRf84h0PCWa5Zpyu8BEw8NbioKIzU-a57IsvfUhCCb1Auzw3wC_5YVzWLIUTIIt3rhb5amjhLVo4XTXZ5T_iyt2jPKo7ZNpcMrcFq63DByEhNzx6tseJN6dDrAlS6_7_BweFZ8aW-Y_xtX0GcmETjjCfStgivg6_owacKXN-RE-5_hw"/>
+</div>
+<!-- Tech Stack Card -->
+<div class="md:col-span-2 p-10 bg-surface-container-low rounded-xl flex flex-col justify-between border border-outline-variant/15">
+<div>
+<h3 class="text-2xl font-bold mb-4 font-headline">Technical Foundation</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs rounded-sm font-bold">PyTorch</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs rounded-sm font-bold">Rust</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs rounded-sm font-bold">CUDA</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs rounded-sm font-bold">Vector DB</span>
+<span class="px-3 py-1 bg-tertiary-container text-on-tertiary-container text-xs rounded-sm font-bold">Transformers</span>
+</div>
+</div>
+<p class="text-on-surface-variant mt-6">
+                    Built with a custom Rust-based inference engine to ensure memory safety and zero-cost abstractions during high-concurrency search queries.
+                </p>
+</div>
+<!-- Strategy Card -->
+<div class="p-8 bg-primary-container text-on-primary-container rounded-xl flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">dynamic_form</span>
+<h4 class="text-xl font-bold font-headline mt-4 leading-tight">Adaptive Indexing</h4>
+</div>
+<!-- Visual Card -->
+<div class="p-8 bg-surface-container-highest rounded-xl flex flex-col justify-between border border-outline-variant/15">
+<p class="text-sm font-medium leading-relaxed italic">"The bridge between raw data and actionable intelligence lies in semantic density."</p>
+<div class="flex items-center gap-2 mt-4">
+<div class="w-8 h-[2px] bg-primary"></div>
+<span class="text-[10px] uppercase tracking-widest font-bold">System Log 0.4</span>
+</div>
+</div>
+</section>
+<!-- Deep Dive Text Section -->
+<section class="max-w-4xl mx-auto mb-24">
+<h2 class="text-4xl font-bold mb-12 font-headline tracking-tight border-b border-outline-variant/30 pb-6">The Methodology</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="space-y-6">
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                        Traditional search relies on keyword matching, a process that misses the nuanced relationships within complex texts. The Neural Library Engine utilizes a multi-head attention mechanism to map documents into a high-dimensional vector space.
+                    </p>
+<p class="text-lg leading-relaxed text-on-surface-variant">
+                        By training on domain-specific corpora, we achieved a 40% increase in retrieval precision compared to off-the-shelf LLM embeddings.
+                    </p>
+</div>
+<div class="space-y-6">
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/10">
+<h4 class="font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified</span>
+                            Performance Win
+                        </h4>
+<p class="text-sm text-on-surface-variant">Reduced infrastructure costs by 65% through custom quantization of the embedding layer without sacrificing accuracy.</p>
+</div>
+<div class="p-6 bg-surface-container rounded-xl border border-outline-variant/10">
+<h4 class="font-bold mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">speed</span>
+                            Low Latency
+                        </h4>
+<p class="text-sm text-on-surface-variant">Sub-millisecond vector lookup across 10 million nodes using a Hierarchical Navigable Small World (HNSW) graph.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Full Width Image Section -->
+<section class="mb-24">
+<div class="relative h-[614px] rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" data-alt="Cinematic satellite view of Earth at night with glowing blue and gold interconnected digital data networks stretching across continents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHaHpV3HZhLiKg1xj-SiTEiamM0EiSYYqrX6BKaoBiuMLMezkwrMdKl1f6ONvx1rVdSqhi81rCXLCpgW5rW8nzjNOvbm4_TxlvXNPZ4q_eiB_ki23VDrVRa3-rtKImtu_O1kZf8H5wOrCf1IV3-lIUE59NbpKcqBYvndZwJlJxPq-8tZo9dC-6e9KJ_OCkY7V2EvqXj0ArtzkrBHH8bfrPMLNow7gJ8gywpDwj2HBLU7o1QrCoK0g0I0Zmzhxs6l5ylB6rFw52H2Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent flex items-end p-12">
+<div class="max-w-2xl">
+<h3 class="text-white text-3xl font-bold font-headline mb-4">Global Knowledge Mapping</h3>
+<p class="text-white/80">Scaling semantic search to a global infrastructure, providing instant cross-lingual translation and context-aware information retrieval.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA/Contact Zone -->
+<section class="bg-surface-container-high rounded-xl p-16 text-center">
+<h2 class="text-5xl font-bold mb-6 font-headline tracking-tighter">Explore the Architecture</h2>
+<p class="text-on-surface-variant max-w-xl mx-auto mb-10 text-lg">Detailed documentation and whitepaper available for institutional partners and research collaborators.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-xl font-bold text-lg hover:opacity-90 transition-opacity">View Documentation</button>
+<button class="bg-surface-container-lowest text-primary border-2 border-primary/10 px-10 py-4 rounded-xl font-bold text-lg hover:bg-surface-container transition-colors">Case Study PDF</button>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#f1eee4] w-full py-12 px-8 border-t border-[#d5c2c4]/15">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
+<div class="font-['Manrope'] text-sm tracking-wide uppercase text-[#514345]">© 2024 Editorial Portfolio</div>
+<div class="flex gap-8">
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-[#514345] hover:underline decoration-[#edafb8] underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">LinkedIn</a>
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-[#514345] hover:underline decoration-[#edafb8] underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">GitHub</a>
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-[#514345] hover:underline decoration-[#edafb8] underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Dribbble</a>
+<a class="font-['Manrope'] text-sm tracking-wide uppercase text-[#514345] hover:underline decoration-[#edafb8] underline-offset-4 opacity-80 hover:opacity-100 transition-opacity" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+</body></html>
