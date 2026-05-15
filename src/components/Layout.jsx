@@ -4,11 +4,18 @@ import Footer from './Footer';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+const moduleLoadTime = Date.now();
+
 export default function Layout() {
   const location = useLocation();
 
   useEffect(() => {
-    // Smooth scroll to top on route change or handle hash anchors
+    // Sayfa ilk yüklendiğinde (ilk 1 saniye içinde) hash atlamasını tamamen engelle
+    if (Date.now() - moduleLoadTime < 1000) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
     if (location.hash) {
       setTimeout(() => {
         const id = location.hash.replace('#', '');

@@ -4,17 +4,21 @@ import Home from './pages/Home'
 import ExperienceDetail from './pages/ExperienceDetail'
 import Contact from './pages/Contact'
 
+import { LanguageProvider } from './context/LanguageContext'
+
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="experience/:id" element={<ExperienceDetail />} />
-          <Route path="contact" element={<Contact />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="experience/:id" element={<ExperienceDetail />} />
+            <Route path="contact" element={<Contact />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   )
 }
 

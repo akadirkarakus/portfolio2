@@ -57,15 +57,22 @@ export default {
         "on-tertiary-fixed": "#0e1f13"
       },
       borderRadius: {
-        "DEFAULT": "0.25rem",
-        "lg": "0.5rem",
-        "xl": "1.5rem",
+        "none": "0",
+        "sm": "0.125rem",
+        "DEFAULT": "0.375rem",
+        "md": "0.5rem",
+        "lg": "0.75rem",
+        "xl": "1rem",
+        "2xl": "1.25rem",
+        "3xl": "1.5rem",
         "full": "9999px"
       },
       fontFamily: {
-        "headline": ["Space Grotesk", "sans-serif"],
-        "body": ["Manrope", "sans-serif"],
-        "label": ["Space Grotesk", "sans-serif"]
+        "headline": ["LTPanneaux", "sans-serif"],
+        "body": ["LTPanneaux", "sans-serif"],
+        "label": ["LTPanneaux", "sans-serif"],
+        "logo": ["Cerco", "sans-serif"],
+        "panneaux": ["LTPanneaux", "sans-serif"]
       }
     },
   },

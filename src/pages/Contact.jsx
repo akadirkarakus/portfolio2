@@ -1,6 +1,9 @@
+import { useLanguage } from '../context/LanguageContext';
 import { CONTENT } from '../data/content';
 
 export default function Contact() {
+  const { language } = useLanguage();
+  const currentContent = CONTENT[language];
   return (
     <div className="pt-32 pb-20 px-8 max-w-7xl mx-auto min-h-[85vh] flex flex-col lg:flex-row gap-16 items-start">
       {/* Left Section: Content & Context */}
@@ -8,27 +11,27 @@ export default function Contact() {
         <header>
           <h1 
             className="text-6xl md:text-7xl font-headline font-bold text-on-surface tracking-tighter leading-[0.9] mb-8"
-            dangerouslySetInnerHTML={{ __html: CONTENT.contact.heroTitle }}
+            dangerouslySetInnerHTML={{ __html: currentContent.contact.heroTitle }}
           />
           <p className="text-lg text-on-surface-variant max-w-md font-body leading-relaxed">
-            {CONTENT.contact.heroSubtitle}
+            {currentContent.contact.heroSubtitle}
           </p>
         </header>
 
         <div className="space-y-8 pt-4">
           <div className="group">
             <p className="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-2">Location</p>
-            <p className="text-xl font-body text-on-surface">{CONTENT.contact.location}</p>
+            <p className="text-xl font-body text-on-surface">{currentContent.contact.location}</p>
           </div>
           <div className="group">
             <p className="font-headline font-bold text-xs uppercase tracking-widest text-primary mb-2">Inquiries</p>
-            <a href={`mailto:${CONTENT.contact.email}`} className="text-xl font-body text-on-surface hover:text-primary transition-colors">{CONTENT.contact.email}</a>
+            <a href={`mailto:${currentContent.contact.email}`} className="text-xl font-body text-on-surface hover:text-primary transition-colors">{currentContent.contact.email}</a>
           </div>
           <div className="pt-4 flex gap-6">
-            <a href={CONTENT.socials[0]?.url || "#"} className="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-all">
+            <a href={currentContent.socials[0]?.url || "#"} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-all">
               <span className="material-symbols-outlined text-on-surface-variant">alternate_email</span>
             </a>
-            <a href={CONTENT.socials[1]?.url || "#"} className="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-all">
+            <a href={currentContent.socials[1]?.url || "#"} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-xl border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-all">
               <span className="material-symbols-outlined text-on-surface-variant">code</span>
             </a>
           </div>
@@ -37,13 +40,13 @@ export default function Contact() {
         {/* Asymmetric Image Piece */}
         <div className="hidden lg:block pt-8">
           <div className="w-64 h-80 rounded-xl overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 surface-container-highest">
-            <img src={CONTENT.contact.image} alt="Studio space" className="w-full h-full object-cover" />
+            <img src={currentContent.contact.image} alt="Studio space" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>
 
       {/* Right Section: Contact Form */}
-      <div className="w-full lg:w-7/12 bg-surface-container-low rounded-3xl p-8 md:p-12">
+      <div className="w-full lg:w-7/12 bg-surface-container-low rounded-xl p-8 md:p-12">
         <form action="#" method="POST" className="space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="relative group">
@@ -76,7 +79,7 @@ export default function Contact() {
               <span className="material-symbols-outlined text-sm">lock</span>
               <span>Secured with SSL encryption</span>
             </div>
-            <button type="button" className="group relative inline-flex items-center justify-center gap-3 bg-primary-container text-on-primary-container font-headline font-bold px-10 py-5 rounded-full hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary-container/20">
+            <button type="button" className="group relative inline-flex items-center justify-center gap-3 bg-primary-container text-on-primary-container font-headline font-bold px-10 py-5 rounded-xl hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary-container/20">
               <span>Send Message</span>
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </button>
